@@ -22,6 +22,7 @@ wifi:
 
 dashboard_import:
   package_import_url: github://wonsky007/cust-esphome-yamls/gosund-sp111-no-led.yaml@main
+  import_full_config: yes
 
 captive_portal: 
 
@@ -56,7 +57,7 @@ sensor:
     
   # Power sensor
   - platform: hlw8012
-    voltage_divider: 765 # Calibration value
+    voltage_divider: 777 # Calibration value
     current_resistor: 0.001
     sel_pin:
       number: GPIO12
