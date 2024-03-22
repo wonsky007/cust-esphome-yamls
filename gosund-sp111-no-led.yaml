@@ -3,7 +3,7 @@
 #
 dashboard_import:
   package_import_url: github://wonsky007/cust-esphome-yamls/gosund-sp111-no-led.yaml@main
-  import_full_config: yes
+  import_full_config: false
 
 substitutions:
   name: "gosund-sp111"
