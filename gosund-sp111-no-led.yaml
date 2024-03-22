@@ -7,11 +7,9 @@ dashboard_import:
 
 substitutions:
   name: "gosund-sp111"
-  friendly_name: "gosund-sp111"
 
 esphome:
   name: "${name}"
-  friendly_name: "${friendly_name}"
   name_add_mac_suffix: true
   platform: ESP8266
   board: esp8285
