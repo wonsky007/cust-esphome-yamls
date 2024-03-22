@@ -5,6 +5,9 @@ esphome:
   name: gosund-sp111
   platform: ESP8266
   board: esp8285
+  project: 
+    name: "wonsky007.gosund-sp111"
+    version: "1.0.0"
 
 # WiFi connection
 wifi:
@@ -15,7 +18,7 @@ wifi:
     ssid: "gosund-sp111"
     password: "12345678"
 
-captive_portal:
+captive_portal: 
 
 # Enable logging
 logger:
@@ -59,18 +62,20 @@ sensor:
     update_interval: 5s
     # Current sensor
     current:
-      name: sp111_current
+      id: sp111_current
+      name: Current
       unit_of_measurement: A
       accuracy_decimals: 3
     # Voltage sensor
     voltage:
-      name: sp111_voltage
+      id: sp111_voltage
+      name: Voltage
       unit_of_measurement: V
       accuracy_decimals: 1
     # Power sensor
     power:
       id: sp111_power
-      name: sp111_power
+      name: Power consumption
       unit_of_measurement: W
       accuracy_decimals: 0
       filters:
@@ -81,7 +86,7 @@ sensor:
 binary_sensor:
   # Binary sensor for the button press
   - platform: gpio
-    name: sp111_button
+    name: Button
     pin:
       number: GPIO13
       inverted: true
@@ -92,7 +97,6 @@ switch:
   # Switch to toggle the relay
   - platform: gpio
     id: relay
-    name: sp111_relay
+    name: Relay
     pin: GPIO15
     restore_mode: ALWAYS_ON
-
